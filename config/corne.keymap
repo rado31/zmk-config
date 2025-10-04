@@ -8,6 +8,29 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        ctrl_default_layer {
+            bindings = <&kp LCTRL>;
+            key-positions = <38 39>;
+            layers = <0>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <32 33>;
+        };
+    };
+
+    behaviors {
+        tl: tl {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGGLE_LAYER";
+            #binding-cells = <1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +44,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P      &none
-&none  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H          &kp J  &kp K      &kp L    &kp ENTER  &none
-&none  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH   &none
-                     &kp LGUI  &mo 1  &kp SPACE    &kp BACKSPACE  &mo 2  &kp RALT
+&none  &kp Q  &kp W  &kp E           &kp R  &kp T        &kp Y          &kp U  &kp I          &kp O    &kp P      &none
+&none  &kp A  &kp S  &kp D           &kp F  &kp G        &kp H          &kp J  &kp K          &kp L    &kp ENTER  &none
+&none  &kp Z  &kp X  &kp C           &kp V  &kp B        &kp N          &kp M  &kp COMMA      &kp DOT  &kp FSLH   &none
+                     &kp LEFT_SHIFT  &mo 1  &kp SPACE    &kp BACKSPACE  &tl 2  &kp RIGHT_ALT
             >;
         };
 
@@ -38,10 +61,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &none
-&none  &none   &none   &none     &none   &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &none   &none
-&none  &none   &none   &none     &none   &none        &none     &none     &none     &none      &none   &none
-                       &kp LGUI  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
+&none  &none  &none  &none  &none  &none    &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none          &none
+&none  &none  &none  &none  &none  &none    &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none  &none          &none
+&none  &none  &none  &none  &none  &none    &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &kp BACKSLASH  &none
+                     &none  &tl 3  &none    &none  &tl 0                 &none
             >;
         };
 
@@ -55,10 +78,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &none
-&none  &none     &none   &none     &none     &none        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &none
-&none  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
-                         &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
+&none  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
+&none  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
+                                   &kp LCTRL     &tl 0         &kp LEFT_GUI    &none         &tl 4         &none
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&none  &none   &none   &none   &none   &kp F6    &kp F7  &none   &none    &none    &none    &none
+&none  &none   &none   &none   &none   &none     &none   &none   &none    &none    &none    &none
+                       &none   &tl 1   &none     &none   &tl 0   &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&none  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp MINUS  &kp PLUS  &none
+&none  &none            &none        &none     &none       &none          &none      &none          &none         &none      &none     &none
+&none  &none            &none        &none     &none       &none          &none      &none          &none         &none      &none     &none
+                                     &none     &tl 0       &none          &none      &tl 2          &none
             >;
         };
     };
