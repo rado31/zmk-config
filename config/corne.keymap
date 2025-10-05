@@ -45,10 +45,10 @@
 
         layer_1 {
             bindings = <
-&none  &kp ESCAPE    &none         &kp LESS_THAN  &kp GREATER_THAN  &none        &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp EQUAL          &none
-&none  &kp TAB       &kp QUESTION  &kp TILDE      &kp SEMI          &kp COLON    &kp LEFT_ARROW   &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW  &kp DOUBLE_QUOTES  &none
-&none  &kp CAPSLOCK  &none         &kp GRAVE      &kp PIPE          &none        &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH    &kp SLASH          &none
-                                   &none          &none             &none        &kp RIGHT_SHIFT  &kp F11               &kp F12
+&none  &kp ESCAPE    &kp TILDE     &kp LESS_THAN     &kp GREATER_THAN  &none        &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER        &kp EQUAL          &none
+&none  &kp TAB       &kp QUESTION  &kp SINGLE_QUOTE  &kp SEMI          &kp COLON    &kp LEFT_ARROW   &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW  &kp DOUBLE_QUOTES  &none
+&none  &kp CAPSLOCK  &none         &kp GRAVE         &kp PIPE          &none        &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH    &kp SLASH          &none
+                                   &none             &none             &none        &kp RIGHT_SHIFT  &kp F11               &kp F12
             >;
         };
 
