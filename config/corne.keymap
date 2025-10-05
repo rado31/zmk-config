@@ -13,7 +13,7 @@
 
         semicolon {
             bindings = <&kp SEMI>;
-            key-positions = <33 34>;
+            key-positions = <33 32>;
             layers = <0>;
         };
     };
