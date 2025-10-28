@@ -48,7 +48,7 @@
 &none  &kp ESCAPE    &kp TILDE     &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN    &kp MINUS        &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDER        &kp EQUAL  &none
 &none  &kp TAB       &kp QUESTION  &kp SINGLE_QUOTE   &kp SEMI       &kp COLON           &kp LEFT_ARROW   &kp DOWN_ARROW    &kp UP_ARROW       &kp RIGHT_ARROW  &kp PIPE   &none
 &none  &kp CAPSLOCK  &kp HOME      &kp GRAVE          &kp END        &kp DELETE          &kp PLUS         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH    &kp SLASH  &none
-                                   &none              &none          &none               &kp RIGHT_SHIFT  &none             &none
+                                   &none              &none          &none               &kp RIGHT_SHIFT  &kp RIGHT_GUI     &none
             >;
         };
 
